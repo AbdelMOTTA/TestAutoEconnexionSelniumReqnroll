@@ -1,4 +1,5 @@
 using Allure.Net.Commons;
+using EconnexionTestAuto.Actions.ApplicationActions;
 using Reqnroll;
 
 namespace EconnexionTestAuto.Hooks
@@ -7,12 +8,13 @@ namespace EconnexionTestAuto.Hooks
     public sealed class Hooks1
     {
         // https://ahbretagne.econnection.fr/Default
-       // private readonly AllureLifecycle _allure;
+        // private readonly AllureLifecycle _allure;
+        private readonly EconnexionAppActions _applicationActions;
 
         [BeforeScenario("@tag1")]
         public void BeforeScenarioWithTag()
         {
-            
+            _applicationActions.StartApplication();
         }
 
         [AfterScenario]
@@ -20,9 +22,10 @@ namespace EconnexionTestAuto.Hooks
         {
             
         }
-        public Hooks1()
+        public Hooks1(EconnexionAppActions applicationActions)
         {
-           // _allure = AllureLifecycle.Instance;
+            // _allure = AllureLifecycle.Instance;
+            _applicationActions = applicationActions;
         }
     }
 }
