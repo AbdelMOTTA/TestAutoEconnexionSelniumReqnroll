@@ -1,3 +1,6 @@
+using EconnexionTestAuto.DTO.DTOUser;
+using EconnexionTestAuto.Utils;
+
 namespace EconnexionTestAuto.StepDefinitions
 {
     [Binding]
@@ -8,7 +11,9 @@ namespace EconnexionTestAuto.StepDefinitions
         [Given("the first number is {int}")]
         public void GivenTheFirstNumberIs(int number)
         {
-    
+            UserData user = JsonTestDataReader.Read<UserData>("user.json");
+
+            Console.WriteLine(user.Username);
         }
 
         [Given("the second number is {int}")]

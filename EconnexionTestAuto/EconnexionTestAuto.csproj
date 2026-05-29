@@ -19,12 +19,11 @@
     <PackageReference Include="Reqnroll.NUnit" Version="3.2.0" />
     <PackageReference Include="nunit" Version="4.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
+		
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Pages\LoginPage\" />
-    <Folder Include="Utils\" />
-    <Folder Include="TestData\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,5 +34,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+<ItemGroup>
+  <Content Include="TestData\**\*.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
 
 </Project>
