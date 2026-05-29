@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\FeaturesLogin\" />
     <Folder Include="Pages\LoginPage\" />
   </ItemGroup>
 
