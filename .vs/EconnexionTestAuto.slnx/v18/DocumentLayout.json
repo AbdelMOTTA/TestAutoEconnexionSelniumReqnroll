@@ -34,8 +34,7 @@
               "RelativeToolTip": "EconnexionTestAuto\\Pages\\LoginPage\\LoginPageLocators.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T22:04:39.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T22:04:39.532Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "EconnexionTestAuto\\Actions\\ApplicationActions\\LoginActions.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAqwBcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T14:59:11.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-29T14:59:11.342Z"
             }
           ]
         }
