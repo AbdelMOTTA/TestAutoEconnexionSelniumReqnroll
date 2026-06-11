@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	<PackageReference Include="FluentAssertions" Version="8.10.0" />
 	<PackageReference Include="Reqnroll" Version="3.2.0" />
     <PackageReference Include="Allure.Net.Commons" Version="2.15.0" />
     <PackageReference Include="Allure.Reqnroll" Version="2.15.0" />

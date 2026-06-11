@@ -43,9 +43,11 @@ namespace EconnexionTestAuto.Utils
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
             return wait.Until(d => d.FindElement(locator));
-        }
+        } // AutomationHelper.WaitForElement(_context.Driver, By.Id("login"), 10).Click();
+
     }
-    // AutomationHelper.WaitForElement(_context.Driver, By.Id("login"), 10).Click();
+    
+
 
 }
 

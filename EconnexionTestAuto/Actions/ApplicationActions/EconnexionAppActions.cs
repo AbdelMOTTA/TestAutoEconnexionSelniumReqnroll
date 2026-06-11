@@ -1,4 +1,6 @@
 ﻿using EconnexionTestAuto.Config;
+using EconnexionTestAuto.DTO.DTOUser;
+using EconnexionTestAuto.Utils;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace EconnexionTestAuto.Actions.ApplicationActions
     {
         private readonly IWebDriver _driver;
         private readonly LoginActions _loginPage;
+        UserData user = JsonTestDataReader.Read<UserData>("user.json");
 
         public EconnexionAppActions(
             IWebDriver driver,
@@ -23,11 +26,15 @@ namespace EconnexionTestAuto.Actions.ApplicationActions
 
         public void StartApplication()
         {
-            _driver.Navigate().GoToUrl(TestConfig.BaseUrl);
+           // _driver.Navigate().GoToUrl(TestConfig.BaseUrl);
+          // _driver.Navigate().GoToUrl("https://qualite-phoenix.econnection.fr/Authentification/Login/STM/DataBase");
+           _driver.Navigate().GoToUrl(user.Url);
+           _driver.Manage().Window.Maximize();
+           _loginPage.EnterUsername(user.Username);
+           _loginPage.EnterPassword(user.Password);
+           _loginPage.ClickLogin();
+           _loginPage.HomePageShouldBeDisplayed();
 
-            _loginPage.EnterUsername(TestConfig.Username);
-            _loginPage.EnterPassword(TestConfig.Password);
-            _loginPage.ClickLogin();
         }
     }
 }

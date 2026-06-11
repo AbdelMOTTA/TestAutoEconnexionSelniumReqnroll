@@ -1,21 +1,17 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EconnexionTestAuto.Pages.LoginPage
 {
     public static class LoginPageLocators
     {
         public static readonly By UsernameInput =
-            By.Id("username");
+            By.Id("Login");
 
         public static readonly By PasswordInput =
-            By.Id("password");
+            By.Id("Password");
 
         public static readonly By LoginButton =
-            By.Id("login");
+            By.Id("btnlogin");
     }
 }
