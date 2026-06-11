@@ -36,8 +36,7 @@ pipeline {
             steps {
                 bat '''
                 echo Searching Allure results...
-                dir /s /b allure-results || echo "No allure-results in root"
-                dir /s /b **\\allure-results || echo "No nested allure-results"
+                dir /s /b allure-results || echo No allure-results found
                 '''
             }
         }
@@ -52,11 +51,10 @@ pipeline {
                 try {
                     allure([
                         includeProperties: false,
-                        results: [[path: '**/allure-results']]
+                        results: [[path: 'EconnexionTestAuto/bin/Release/net8.0/allure-results']]
                     ])
-                }
-                catch (err) {
-                    echo "Allure failed or no results found: ${err}"
+                } catch (err) {
+                    echo "Allure generation skipped or failed: ${err}"
                 }
             }
 
@@ -64,8 +62,12 @@ pipeline {
             archiveArtifacts artifacts: '**/allure-results/**', allowEmptyArchive: true
         }
 
+        success {
+            echo "Build SUCCESS"
+        }
+
         failure {
-            echo "Build failed - check test logs"
+            echo "Build FAILED (check test logs)"
         }
     }
 }
