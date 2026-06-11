@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/anioua61-netizen/ReqnrollProject.git'
+                    url: 'https://github.com/AbdelMOTTA/TestAutoEconnexionSelniumReqnroll.git'
             }
         }
 
